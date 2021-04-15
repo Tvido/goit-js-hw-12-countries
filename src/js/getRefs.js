@@ -1,4 +1,7 @@
-const refs = {
-  cardContainer: document.querySelector(".js-card-container"),
-  searchForm: document.querySelector(".js-search-form"),
-};
+export default function getRefs() {
+  return {
+    inputField: document.querySelector('#search'),
+    countriesList: document.querySelector('.countries-list'),
+    form: document.querySelector('.js-search-form'),
+  };
+}
