@@ -11,6 +11,7 @@ function errorMsgMarkUp() {
     alert(`Too many matches found.
     Please enter a more specific query!`);
   }
+  
 }
 
 function hideError() {
