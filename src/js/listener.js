@@ -1,6 +1,6 @@
 import API from './fetchCountries.js';
 import debounce from 'lodash.debounce';
-// import { alert } from '@pnotify/core';
+import { alert, error } from '@pnotify/core';
 import getRefs from './getRefs.js';
 import countryCardTmpl from '../templates/items.hbs';
 import countriesListTml from '../templates/list.hbs';
@@ -29,7 +29,7 @@ function renderCountryCard(countries) {
   if (countries.length >= 10) {
     return err.errorMsgMarkUp();
   }
-  if (countries.length < 10 && countries.length > 1) {
+  if (countries.length > 1 && countries.length < 10) {
     err.hideError();
     refs.countriesList.innerHTML = countriesListTml(countries);
   }
@@ -38,4 +38,6 @@ function renderCountryCard(countries) {
     err.hideError();
     refs.countriesList.innerHTML = countryCardTmpl(countries[0]);
   }
+  
+  error("Please enter a more specific query!");
 }
