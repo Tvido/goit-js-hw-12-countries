@@ -1,4 +1,4 @@
-import { alert } from '@pnotify/core';
+import { alert, error } from '@pnotify/core';
 import '@pnotify/core/dist/BrightTheme.css';
 import '@pnotify/core/dist/PNotify.css';
 import getRefs from './getRefs.js';
