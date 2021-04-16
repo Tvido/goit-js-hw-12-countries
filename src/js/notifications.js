@@ -1,6 +1,6 @@
 import API from './fetchCountries.js';
 import debounce from 'lodash.debounce';
-import { alert, error, defaults } from '@pnotify/core';
+import { alert, error } from '@pnotify/core';
 import getRefs from './getRefs.js';
 import countryCardTmpl from '../templates/items.hbs';
 import countriesListTml from '../templates/list.hbs';
@@ -39,5 +39,6 @@ function renderCountryCard(countries) {
     refs.countriesList.innerHTML = countryCardTmpl(countries[0]);
   }
   // err.hideError();
-  error("Please enter a more specific query!");
+  // error("Please enter a more specific query!");
+  // searchQuery = refs.inputField.value;
 }

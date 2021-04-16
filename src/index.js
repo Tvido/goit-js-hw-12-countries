@@ -1,2 +1,2 @@
 import './css/styles.css';
-import listener from './js/notifications';
+import notification from './js/notifications';
